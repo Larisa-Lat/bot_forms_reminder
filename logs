@@ -1,0 +1,85 @@
+06/10/2024 18:58:14 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+06/10/2024 18:58:14 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+06/10/2024 18:58:14 - INFO - Added job "get_needed_forms" to job store "default"
+06/10/2024 18:58:14 - INFO - Added job "create_new_form" to job store "default"
+06/10/2024 18:58:14 - INFO - Scheduler started
+06/10/2024 18:58:14 - INFO - Start polling
+06/10/2024 18:58:14 - INFO - Run polling for bot @try_mentor_reu_bot id=7445572167 - 'Try mentoring bot'
+06/10/2024 18:58:15 - INFO - Running job "create_new_form (trigger: interval[0:00:05], next run at: 2024-10-06 18:58:20 MSK)" (scheduled at 2024-10-06 18:58:15+03:00)
+06/10/2024 18:58:15 - INFO - file_cache is only supported with oauth2client<4.0.0
+06/10/2024 18:58:19 - INFO - Job "create_new_form (trigger: interval[0:00:05], next run at: 2024-10-06 18:58:20 MSK)" executed successfully
+06/10/2024 18:58:20 - INFO - Running job "create_new_form (trigger: interval[0:00:05], next run at: 2024-10-06 18:58:25 MSK)" (scheduled at 2024-10-06 18:58:20+03:00)
+06/10/2024 18:58:20 - INFO - file_cache is only supported with oauth2client<4.0.0
+06/10/2024 18:58:26 - WARNING - Execution of job "create_new_form (trigger: interval[0:00:05], next run at: 2024-10-06 18:58:25 MSK)" skipped: maximum number of running instances reached (1)
+06/10/2024 18:58:26 - INFO - Job "create_new_form (trigger: interval[0:00:05], next run at: 2024-10-06 18:58:30 MSK)" executed successfully
+06/10/2024 18:58:30 - INFO - Running job "create_new_form (trigger: interval[0:00:05], next run at: 2024-10-06 18:58:35 MSK)" (scheduled at 2024-10-06 18:58:30+03:00)
+06/10/2024 18:58:30 - INFO - file_cache is only supported with oauth2client<4.0.0
+06/10/2024 18:58:34 - INFO - Job "create_new_form (trigger: interval[0:00:05], next run at: 2024-10-06 18:58:35 MSK)" executed successfully
+06/10/2024 18:58:35 - INFO - Running job "create_new_form (trigger: interval[0:00:05], next run at: 2024-10-06 18:58:40 MSK)" (scheduled at 2024-10-06 18:58:35+03:00)
+06/10/2024 18:58:35 - INFO - file_cache is only supported with oauth2client<4.0.0
+06/10/2024 18:58:39 - INFO - Job "create_new_form (trigger: interval[0:00:05], next run at: 2024-10-06 18:58:40 MSK)" executed successfully
+06/10/2024 18:58:40 - INFO - Running job "create_new_form (trigger: interval[0:00:05], next run at: 2024-10-06 18:58:45 MSK)" (scheduled at 2024-10-06 18:58:40+03:00)
+06/10/2024 18:58:40 - INFO - file_cache is only supported with oauth2client<4.0.0
+06/10/2024 18:58:43 - INFO - Polling stopped
+06/10/2024 18:58:43 - INFO - Scheduler has been shut down
+06/10/2024 18:58:43 - ERROR - Job "create_new_form (trigger: interval[0:00:05], next run at: 2024-10-06 18:58:45 MSK)" raised an exception
+Traceback (most recent call last):
+  File "C:\Python\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python\Lib\asyncio\base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\All_Py_Projects\botMentoring\main.py", line 90, in start
+    await dp.start_polling(bot)
+  File "C:\All_Py_Projects\botMentoring\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 543, in start_polling
+    done, pending = await asyncio.wait(tasks, return_when=asyncio.FIRST_COMPLETED)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python\Lib\asyncio\tasks.py", line 418, in wait
+    return await _wait(fs, timeout, return_when, loop)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python\Lib\asyncio\tasks.py", line 525, in _wait
+    await waiter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Python\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\All_Py_Projects\botMentoring\venv\Lib\site-packages\apscheduler\executors\base_py3.py", line 30, in run_coroutine_job
+    retval = await job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\All_Py_Projects\botMentoring\bot\handlers\group_handlers.py", line 54, in create_new_form
+    await bot.send_message(chat_id=GROUP_ID, text=answer)
+  File "C:\All_Py_Projects\botMentoring\venv\Lib\site-packages\aiogram\client\bot.py", line 2912, in send_message
+    return await self(call, request_timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\All_Py_Projects\botMentoring\venv\Lib\site-packages\aiogram\client\bot.py", line 485, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\All_Py_Projects\botMentoring\venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\All_Py_Projects\botMentoring\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 181, in make_request
+    async with session.post(
+  File "C:\All_Py_Projects\botMentoring\venv\Lib\site-packages\aiohttp\client.py", line 1353, in __aenter__
+    self._resp = await self._coro
+                 ^^^^^^^^^^^^^^^^
+  File "C:\All_Py_Projects\botMentoring\venv\Lib\site-packages\aiohttp\client.py", line 684, in _request
+    await resp.start(conn)
+  File "C:\All_Py_Projects\botMentoring\venv\Lib\site-packages\aiohttp\client_reqrep.py", line 999, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\All_Py_Projects\botMentoring\venv\Lib\site-packages\aiohttp\streams.py", line 640, in read
+    await self._waiter
+asyncio.exceptions.CancelledError
+06/10/2024 18:58:44 - INFO - Polling stopped for bot @try_mentor_reu_bot id=7445572167 - 'Try mentoring bot'

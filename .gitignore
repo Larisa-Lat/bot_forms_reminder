@@ -1,0 +1,11 @@
+../.python-version
+didnt_work_out/credentials.json
+.env
+.idea/
+.venv/
+venv/
+__pycache__/
+
+config.py
+model/forms/manage_forms.py
+credentials.json
